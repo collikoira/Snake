@@ -96,16 +96,6 @@ def borders():
     gotapple()
 
 
-def checkcollision(x,y):
-    print (x)
-    print (y)
-    print(xpoint)
-    print(ypoint)
-    try:
-        if xpoint.index(x,1,len(xpoint)) == ypoint.index(y,1,len(ypoint)):
-
-    except: ValueError
-
 run = True
 while run:
     pygame.time.delay(80)
@@ -139,7 +129,6 @@ while run:
 
 
     screenUPDATE( vel, screen ,width, height, RIGHT, LEFT, UP, DOWN)
-    checkcollision(x,y)
     place(x,y,xpoint, ypoint,points)
     body(x,y,vel, screen ,width, height, RIGHT, LEFT, UP, DOWN,WHITE)
     apple(screen, RED,x,y)
